@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('fetchrecords', [\App\Http\Controllers\MigrationController::class, 'fetch']);
+Route::get('createrecords', [\App\Http\Controllers\MigrationController::class, 'create']);
+Route::get('updaterecords', [\App\Http\Controllers\MigrationController::class, 'update']);
+Route::get('deleterecords', [\App\Http\Controllers\MigrationController::class, 'delete']);
